@@ -11,6 +11,5 @@ if st.button("Predict"):
     #print(user_input)
     predicted_label = model.predict([user_input])[0]
     #print("Predicted label:"+ str(predicted_label))
-    predicted_news_label = news_labels.gt(str(predicted_label),"Unknown")
-    print("Predicted news label:", predicted_news_label)
+    predicted_news_label = news_labels[str(predicted_label)]
     st.info(f"Predicted label: {predicted_news_label}")
